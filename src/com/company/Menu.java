@@ -14,17 +14,20 @@ public class Menu {
         String name = scn.next();
         String email;
         double balance;
+
         do {
             System.out.println("Iveskite emaila");
             email = scn.next();
-            if (email.contains("@")) break;
+            if (email.contains("@") && email.contains(".")) break;
             else System.out.println("neteisingai ivestas emailas");
         } while (true);
 
-        do {
-            System.out.println("Iveskite balansa");
-            balance = scn.nextDouble();
-        } while (true);
+//        do {
+        System.out.println("Iveskite balansa");
+        balance = scn.nextDouble();
+//        if (balance) break;
+//        else System.out.println("neteisingai ivestas balansas");
+//        } while (true);
 
         System.out.println("Iveskite kredito limita");
         int creditLimit = scn.nextInt();
